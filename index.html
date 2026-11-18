@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="narrative">
+  <meta name="design-style" content="sticker">
+  <title>議論文寫作大挑戰：高明說話術</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..900;1,9..40,400..900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces (Sticker palette) */
+      --background: #fef7ff;
+      --surface-container-low: #ffffff;
+      --surface-container: #f8eef8;
+      --surface-container-high: #f2e8f2;
+
+      /* Ink */
+      --on-surface: #2e1a28;
+      --on-surface-variant: #604868;
+
+      /* Rules */
+      --outline: #907898;
+      --outline-variant: #dcc8e0;
+
+      /* Accents */
+      --primary: #c2207f;
+      --on-primary: #ffffff;
+      --primary-container: #f080c0;
+      --on-primary-container: #2e1a28;
+      --secondary: #7c52aa;
+      --on-secondary: #ffffff;
+      --tertiary: #0096cc;
+      --error: #c53030;
+      --on-error: #ffffff;
+
+      /* Data series */
+      --data-1: #c2207f;
+      --data-2: #7c52aa;
+      --data-3: #0096cc;
+      --data-4: #d96a00;
+      --data-context: #c8b8d0;
+
+      /* Semantic & Soft Clay Surfaces */
+      --positive: #15803d;
+      --on-positive: #ffffff;
+      --warning: #b45309;
+      --on-warning: #ffffff;
+      --focus: #c2207f;
+
+      --surface-pink-soft: #fde8f4;
+      --surface-grape-soft: #f0e8fb;
+      --surface-sky-soft: #e2f5fc;
+      --surface-positive-soft: #e4f8ec;
+      --surface-warning-soft: #fef3dc;
+      --surface-error-soft: #fde8e8;
+
+      /* Fonts */
+      --font-headline: 'Noto Sans TC', 'DM Sans', sans-serif;
+      --font-body: 'Noto Sans TC', 'DM Sans', sans-serif;
+      --font-label: 'Noto Sans TC', 'DM Sans', sans-serif;
+
+      /* Shape */
+      --rounded: 1.25rem;
+      --rounded-lg: 2rem;
+      --rounded-full: 9999px;
+
+      /* Claymorphic & Tinted Shadows (no grey/black shadows) */
+      --shadow-pink: 0 6px 20px rgb(194 32 127 / 0.16), inset 0 3px 6px rgb(255 255 255 / 0.9), inset 0 -4px 8px rgb(194 32 127 / 0.08);
+      --shadow-pink-deep: 0 12px 28px rgb(194 32 127 / 0.28), inset 0 3px 6px rgb(255 255 255 / 0.9), inset 0 -4px 10px rgb(194 32 127 / 0.12);
+      --shadow-grape: 0 6px 20px rgb(124 82 170 / 0.16), inset 0 3px 6px rgb(255 255 255 / 0.9), inset 0 -4px 8px rgb(124 82 170 / 0.08);
+      --shadow-sky: 0 6px 20px rgb(0 150 204 / 0.16), inset 0 3px 6px rgb(255 255 255 / 0.9), inset 0 -4px 8px rgb(0 150 204 / 0.08);
+      --shadow-positive: 0 6px 20px rgb(21 128 61 / 0.16), inset 0 3px 6px rgb(255 255 255 / 0.9), inset 0 -4px 8px rgb(21 128 61 / 0.08);
+      --shadow-btn-pink: 0 6px 16px rgb(194 32 127 / 0.26), inset 0 2px 4px rgb(255 255 255 / 0.35), inset 0 -3px 6px rgb(90 10 55 / 0.2);
+      --shadow-btn-grape: 0 6px 16px rgb(124 82 170 / 0.26), inset 0 2px 4px rgb(255 255 255 / 0.35), inset 0 -3px 6px rgb(55 30 90 / 0.2);
+      --shadow-well: inset 0 3px 8px rgb(124 82 170 / 0.1), inset 0 -2px 4px rgb(255 255 255 / 0.8);
+      --ring-focus: 0 0 0 3px rgb(194 32 127 / 0.35);
+
+      /* Motion */
+      --pop-scale: scale(1.03);
+      --lift: translateY(-4px);
+      --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+
+      /* Type scale (Narrative) */
+      --display-size: clamp(2.15rem, 1.4rem + 3vw, 3.35rem);
+      --headline-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.15rem);
+      --subhead-size: clamp(1.125rem, 1.02rem + 0.5vw, 1.375rem);
+      --body-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+      --label-size: clamp(0.78rem, 0.75rem + 0.12vw, 0.85rem);
+
+      /* Spacing scale (4pt base) */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 5.5rem;
+    }
+
+    /* Base reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.65;
+    }
+    header { position: static !important; }
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+    h1, h2, h3, h4, p, ul, ol { margin-top: 0; }
+
+    .page-grid {
+      display: grid;
+      gap: var(--space-2xl);
+      padding: var(--space-lg);
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .page-grid * { min-width: 0; }
+
+    /* Focus rings */
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    /* Typography */
+    .display {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: var(--display-size);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--on-surface);
+      margin-bottom: var(--space-md);
+    }
+    .display em, .section-title em {
+      font-style: normal;
+      color: var(--primary);
+    }
+    .section-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: var(--headline-size);
+      line-height: 1.25;
+      color: var(--on-surface);
+      margin-bottom: var(--space-sm);
+    }
+    .subhead {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: var(--subhead-size);
+      line-height: 1.35;
+      color: var(--on-surface);
+      margin-bottom: var(--space-sm);
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: var(--label-size);
+      color: var(--primary);
+      background: var(--surface-pink-soft);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded-full);
+      box-shadow: var(--shadow-pink);
+      margin-bottom: var(--space-sm);
+    }
+    .kicker--grape {
+      color: var(--secondary);
+      background: var(--surface-grape-soft);
+      box-shadow: var(--shadow-grape);
+    }
+    .kicker--sky {
+      color: var(--on-surface);
+      background: var(--surface-sky-soft);
+      box-shadow: var(--shadow-sky);
+    }
+    .prose-lead {
+      font-size: var(--subhead-size);
+      color: var(--on-surface-variant);
+      max-width: 62ch;
+      margin-bottom: var(--space-lg);
+    }
+    .muted-text {
+      color: var(--on-surface-variant);
+      font-size: 0.95rem;
+    }
+
+    /* Claymorphic Cards */
+    .clay-card {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded);
+      box-shadow: var(--shadow-pink);
+      padding: var(--space-lg);
+      transition: transform var(--dur-short) var(--ease-bounce), box-shadow var(--dur-short) var(--ease-out);
+    }
+    .clay-card--sky { box-shadow: var(--shadow-sky); }
+    .clay-card--grape { box-shadow: var(--shadow-grape); }
+    .clay-card--positive { box-shadow: var(--shadow-positive); }
+
+    .hero-panel {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      box-shadow: var(--shadow-pink-deep);
+      padding: var(--space-xl);
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+      gap: var(--space-xl);
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: var(--rounded-full);
+      background: var(--surface-pink-soft);
+      top: -80px;
+      right: -60px;
+      z-index: 0;
+    }
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: var(--rounded-full);
+      background: var(--surface-sky-soft);
+      bottom: -50px;
+      left: 38%;
+      z-index: 0;
+    }
+    .hero-content, .hero-visual {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    /* Pill Buttons & Controls */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      min-height: 44px;
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--rounded-full);
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform var(--dur-short) var(--ease-bounce), box-shadow var(--dur-short) var(--ease-out), background-color var(--dur-micro) var(--ease-out);
+    }
+    .btn:hover:not(:disabled) {
+      transform: var(--pop-scale);
+    }
+    .btn:active:not(:disabled) {
+      transform: scale(0.97);
+    }
+    .btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+      box-shadow: var(--shadow-btn-pink);
+    }
+    .btn-primary:hover:not(:disabled) {
+      box-shadow: var(--shadow-pink-deep);
+    }
+    .btn-secondary {
+      background: var(--secondary);
+      color: var(--on-secondary);
+      box-shadow: var(--shadow-btn-grape);
+    }
+    .btn-soft {
+      background: var(--surface-container);
+      color: var(--on-surface);
+      box-shadow: var(--shadow-grape);
+    }
+    .btn-soft:hover:not(:disabled) {
+      background: var(--surface-pink-soft);
+    }
+    .btn-positive {
+      background: var(--positive);
+      color: var(--on-positive);
+      box-shadow: var(--shadow-positive);
+    }
+    .btn-small {
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      font-size: 0.9rem;
+    }
+
+    /* Quick Jump Navigation Bar */
+    .jump-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      box-shadow: var(--shadow-grape);
+    }
+    .jump-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .jump-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded-full);
+      background: var(--surface-container);
+      color: var(--on-surface);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      box-shadow: var(--shadow-well);
+      transition: transform var(--dur-short) var(--ease-bounce), background-color var(--dur-micro) var(--ease-out);
+    }
+    .jump-pill:hover {
+      background: var(--surface-pink-soft);
+      transform: var(--pop-scale);
+    }
+    .score-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-xs) var(--space-md);
+      min-height: 44px;
+      border-radius: var(--rounded-full);
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      box-shadow: var(--shadow-pink);
+    }
+
+    /* Unit Section Header */
+    .section-block {
+      display: grid;
+      gap: var(--space-lg);
+    }
+    .section-header {
+      display: grid;
+      gap: var(--space-xs);
+    }
+
+    /* Unit 1: 3 Elements Interactive Explorer */
+    .elements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+      gap: var(--space-lg);
+    }
+    .element-btn {
+      text-align: left;
+      background: var(--surface-container-low);
+      border: 3px solid transparent;
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-pink);
+      cursor: pointer;
+      display: grid;
+      gap: var(--space-sm);
+      transition: transform var(--dur-short) var(--ease-bounce), box-shadow var(--dur-short) var(--ease-out), background-color var(--dur-micro) var(--ease-out);
+    }
+    .element-btn:nth-child(2) { box-shadow: var(--shadow-sky); }
+    .element-btn:nth-child(3) { box-shadow: var(--shadow-grape); }
+    .element-btn:hover { transform: var(--lift); }
+    .element-btn.is-active {
+      background: var(--surface-pink-soft);
+      box-shadow: var(--shadow-pink-deep);
+      outline: 3px solid var(--primary);
+    }
+    .element-btn:nth-child(2).is-active {
+      background: var(--surface-sky-soft);
+      outline: 3px solid var(--tertiary);
+    }
+    .element-btn:nth-child(3).is-active {
+      background: var(--surface-grape-soft);
+      outline: 3px solid var(--secondary);
+    }
+    .icon-bubble {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--rounded-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-pink-soft);
+      color: var(--primary);
+      box-shadow: var(--shadow-pink);
+    }
+    .icon-bubble--grape {
+      background: var(--surface-grape-soft);
+      color: var(--secondary);
+      box-shadow: var(--shadow-grape);
+    }
+    .icon-bubble--sky {
+      background: var(--surface-sky-soft);
+      color: var(--on-surface);
+      box-shadow: var(--shadow-sky);
+    }
+    .icon-bubble--positive {
+      background: var(--surface-positive-soft);
+      color: var(--positive);
+      box-shadow: var(--shadow-positive);
+    }
+
+    .element-detail-panel {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-grape);
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: var(--space-lg);
+      align-items: center;
+    }
+    .callout-well {
+      background: var(--surface-container);
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      box-shadow: var(--shadow-well);
+    }
+
+    /* 5-Paragraph Architecture Strip */
+    .arch-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+    .arch-step {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-pink);
+      display: grid;
+      gap: var(--space-xs);
+      align-content: start;
+    }
+    .arch-step:nth-child(2), .arch-step:nth-child(3) { box-shadow: var(--shadow-positive); }
+    .arch-step:nth-child(4) { box-shadow: var(--shadow-sky); }
+    .arch-step:nth-child(5) { box-shadow: var(--shadow-grape); }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--rounded-full);
+      font-size: var(--label-size);
+      font-weight: 700;
+      width: fit-content;
+    }
+    .badge-pink { background: var(--primary-container); color: var(--on-primary-container); }
+    .badge-grape { background: var(--surface-grape-soft); color: var(--secondary); }
+    .badge-positive { background: var(--surface-positive-soft); color: var(--positive); }
+    .badge-warning { background: var(--surface-warning-soft); color: var(--warning); }
+    .badge-error { background: var(--surface-error-soft); color: var(--error); }
+    .badge-sky { background: var(--surface-sky-soft); color: var(--on-surface); }
+
+    /* Textbook vs School Comparison Switcher */
+    .segmented {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      background: var(--surface-container-high);
+      padding: var(--space-xs);
+      border-radius: var(--rounded-full);
+      box-shadow: var(--shadow-well);
+      width: fit-content;
+    }
+    .seg-btn {
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-lg);
+      border-radius: var(--rounded-full);
+      border: none;
+      background: transparent;
+      font-weight: 700;
+      color: var(--on-surface-variant);
+      cursor: pointer;
+      transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-bounce), color var(--dur-micro);
+    }
+    .seg-btn[aria-pressed="true"] {
+      background: var(--primary);
+      color: var(--on-primary);
+      box-shadow: var(--shadow-btn-pink);
+    }
+
+    .story-compare-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr));
+      gap: var(--space-lg);
+    }
+    .story-card {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-pink);
+      display: grid;
+      gap: var(--space-md);
+      align-content: start;
+    }
+    .story-card--school { box-shadow: var(--shadow-sky); }
+    .story-quote {
+      background: var(--surface-pink-soft);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .story-quote--sky { background: var(--surface-sky-soft); }
+
+    /* Rhetoric Cards */
+    .rhetoric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: var(--space-lg);
+    }
+    .proverb-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .proverb-item {
+      background: var(--surface-container);
+      border-radius: var(--rounded);
+      padding: var(--space-sm) var(--space-md);
+      box-shadow: var(--shadow-well);
+    }
+    .proverb-item strong {
+      color: var(--primary);
+      display: block;
+    }
+
+    /* Unit 2: 5-Stage Challenge Arena */
+    .arena-panel {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      box-shadow: var(--shadow-grape);
+      padding: var(--space-xl);
+      display: grid;
+      gap: var(--space-lg);
+    }
+    .stage-progress-bar {
+      width: 100%;
+      height: 16px;
+      border-radius: var(--rounded-full);
+      background: var(--surface-container-high);
+      box-shadow: var(--shadow-well);
+      overflow: hidden;
+    }
+    .stage-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--tertiary);
+      border-radius: var(--rounded-full);
+      transition: width var(--dur-long) var(--ease-bounce);
+    }
+    .stage-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+      gap: var(--space-sm);
+    }
+    .stage-tab {
+      min-height: 54px;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      border: none;
+      background: var(--surface-container);
+      color: var(--on-surface);
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-xs);
+      box-shadow: var(--shadow-well);
+      text-align: left;
+      transition: transform var(--dur-short) var(--ease-bounce), background-color var(--dur-micro), box-shadow var(--dur-short);
+    }
+    .stage-tab:hover { transform: var(--lift); }
+    .stage-tab.is-current {
+      background: var(--primary);
+      color: var(--on-primary);
+      box-shadow: var(--shadow-btn-pink);
+    }
+    .stage-tab.is-done:not(.is-current) {
+      background: var(--surface-positive-soft);
+      color: var(--positive);
+      box-shadow: var(--shadow-positive);
+    }
+
+    .stage-workspace {
+      background: var(--surface-container);
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-well);
+      display: grid;
+      gap: var(--space-lg);
+    }
+
+    /* Quiz Choices */
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+    .choice-card {
+      background: var(--surface-container-low);
+      border: none;
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      text-align: left;
+      cursor: pointer;
+      box-shadow: var(--shadow-pink);
+      display: grid;
+      gap: var(--space-xs);
+      align-content: start;
+      min-height: 44px;
+      transition: transform var(--dur-short) var(--ease-bounce), box-shadow var(--dur-short), background-color var(--dur-micro);
+    }
+    .choice-card:hover:not(:disabled) {
+      transform: var(--lift);
+      box-shadow: var(--shadow-pink-deep);
+    }
+    .choice-card.is-correct {
+      background: var(--surface-positive-soft);
+      outline: 3px solid var(--positive);
+      box-shadow: var(--shadow-positive);
+    }
+    .choice-card.is-wrong {
+      background: var(--surface-error-soft);
+      outline: 3px solid var(--error);
+    }
+
+    /* Stage 2: Sorting Cards */
+    .sort-list {
+      display: grid;
+      gap: var(--space-md);
+    }
+    .sort-item {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      box-shadow: var(--shadow-grape);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .sort-item-text {
+      flex: 1 1 280px;
+      font-weight: 500;
+    }
+    .sort-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .sort-btn {
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded-full);
+      border: none;
+      background: var(--surface-container);
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      box-shadow: var(--shadow-well);
+      transition: transform var(--dur-short) var(--ease-bounce), background-color var(--dur-micro);
+    }
+    .sort-btn:hover { transform: var(--pop-scale); }
+    .sort-btn.selected-pos {
+      background: var(--positive);
+      color: var(--on-positive);
+      box-shadow: var(--shadow-positive);
+    }
+    .sort-btn.selected-neg {
+      background: var(--error);
+      color: var(--on-error);
+    }
+
+    /* Stage 3: Matching Pairs */
+    .match-columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--space-lg);
+    }
+    .match-col {
+      display: grid;
+      gap: var(--space-sm);
+      align-content: start;
+    }
+    .match-card {
+      min-height: 64px;
+      padding: var(--space-md);
+      border-radius: var(--rounded);
+      border: none;
+      background: var(--surface-container-low);
+      text-align: left;
+      cursor: pointer;
+      box-shadow: var(--shadow-sky);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      transition: transform var(--dur-short) var(--ease-bounce), background-color var(--dur-micro);
+    }
+    .match-card:hover:not(:disabled) { transform: var(--lift); }
+    .match-card.is-selected {
+      background: var(--surface-pink-soft);
+      outline: 3px solid var(--primary);
+      box-shadow: var(--shadow-pink);
+    }
+    .match-card.is-matched {
+      background: var(--surface-positive-soft);
+      outline: 3px solid var(--positive);
+      box-shadow: var(--shadow-positive);
+      cursor: default;
+    }
+
+    /* Stage 5: 5-Paragraph Sequence Puzzle */
+    .puzzle-list {
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .puzzle-slot {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-pink);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .puzzle-slot.is-correct-slot {
+      background: var(--surface-positive-soft);
+      outline: 3px solid var(--positive);
+    }
+    .puzzle-slot.is-wrong-slot {
+      background: var(--surface-warning-soft);
+      outline: 3px solid var(--warning);
+    }
+    .puzzle-num {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--rounded-full);
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .puzzle-controls {
+      display: flex;
+      gap: var(--space-sm);
+    }
+    .icon-btn {
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: var(--rounded-full);
+      border: none;
+      background: var(--surface-container);
+      color: var(--on-surface);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-well);
+      transition: transform var(--dur-short) var(--ease-bounce), background-color var(--dur-micro);
+    }
+    .icon-btn:hover:not(:disabled) {
+      background: var(--surface-pink-soft);
+      transform: var(--pop-scale);
+    }
+    .icon-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    /* Feedback Banner */
+    .feedback-banner {
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      font-weight: 700;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+    }
+    .feedback-banner--ok {
+      background: var(--surface-positive-soft);
+      color: var(--positive);
+      box-shadow: var(--shadow-positive);
+    }
+    .feedback-banner--info {
+      background: var(--surface-sky-soft);
+      color: var(--on-surface);
+      box-shadow: var(--shadow-sky);
+    }
+    .feedback-banner--warn {
+      background: var(--surface-warning-soft);
+      color: var(--warning);
+    }
+
+    /* Unit 3: Writing Studio */
+    .studio-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    .writer-form {
+      display: grid;
+      gap: var(--space-lg);
+    }
+    .field-card {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-pink);
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .field-card:nth-child(even) { box-shadow: var(--shadow-grape); }
+    .field-label {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--on-surface);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .field-hint {
+      font-size: 0.9rem;
+      color: var(--on-surface-variant);
+    }
+    .clay-input, .clay-select, .clay-textarea {
+      width: 100%;
+      background: var(--surface-container);
+      border: 2px solid var(--outline);
+      border-radius: var(--rounded-full);
+      padding: var(--space-sm) var(--space-md);
+      min-height: 44px;
+      color: var(--on-surface);
+      transition: border-color var(--dur-micro), box-shadow var(--dur-micro), background-color var(--dur-micro);
+    }
+    .clay-select {
+      padding-right: var(--space-xl);
+    }
+    .clay-textarea {
+      border-radius: var(--rounded);
+      min-height: 104px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+    .clay-input:focus, .clay-select:focus, .clay-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: var(--surface-container-low);
+      box-shadow: var(--ring-focus);
+    }
+    .helper-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .chip-btn {
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded-full);
+      border: none;
+      background: var(--surface-grape-soft);
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      box-shadow: var(--shadow-grape);
+      transition: transform var(--dur-short) var(--ease-bounce), background-color var(--dur-micro);
+    }
+    .chip-btn:hover {
+      transform: var(--pop-scale);
+      background: var(--surface-pink-soft);
+      color: var(--primary);
+    }
+
+    .preview-panel {
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sky);
+      display: grid;
+      gap: var(--space-md);
+    }
+    .essay-paper {
+      background: var(--surface-container);
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-well);
+      display: grid;
+      gap: var(--space-md);
+    }
+    .essay-para {
+      text-indent: 2em;
+      margin: 0;
+      color: var(--on-surface);
+    }
+    .essay-empty {
+      color: var(--on-surface-variant);
+      font-style: italic;
+    }
+    .checklist-box {
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      background: var(--surface-container);
+    }
+    .check-row.is-met {
+      background: var(--surface-positive-soft);
+      color: var(--positive);
+      font-weight: 700;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: center;
+    }
+    .source-footer {
+      background: var(--surface-container);
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      color: var(--on-surface-variant);
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .hero-panel {
+        grid-template-columns: 1fr;
+      }
+      .element-detail-panel {
+        grid-template-columns: 1fr;
+      }
+      .studio-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .page-grid {
+        padding: var(--space-md);
+        gap: var(--space-xl);
+      }
+      .hero-panel, .arena-panel {
+        padding: var(--space-lg);
+      }
+      .match-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-grid">
+
+    <!-- Hero Section -->
+    <header class="hero-panel">
+      <div class="hero-content">
+        <div class="kicker">
+          <i data-lucide="sparkles" aria-hidden="true" width="16" height="16"></i>
+          <span>國小五年級國語文互動學習站</span>
+        </div>
+        <h1 class="display">議論文寫作大挑戰：<em>高明說話術</em></h1>
+        <p class="prose-lead">
+          話要說得好，心地先要好！跟著五年級課文《高明說話術》，一起拆解「總—分—總」文章架構與「兩正一反」對比論證法，闖過五道說話修煉關卡，親手寫出溫暖又有說服力的議論文。
+        </p>
+        <div class="action-row">
+          <a href="#unit-1" class="btn btn-primary">
+            <i data-lucide="book-open" aria-hidden="true" width="18" height="18"></i>
+            <span>開始學習三要素</span>
+          </a>
+          <a href="#unit-2" class="btn btn-secondary">
+            <i data-lucide="trophy" aria-hidden="true" width="18" height="18"></i>
+            <span>直接挑戰五關測驗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Custom Claymorphic Vector Illustration -->
+        <svg viewBox="0 0 280 230" width="260" height="214" aria-hidden="true">
+          <defs>
+            <filter id="soft-clay" x="-15%" y="-15%" width="130%" height="130%">
+              <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#c2207f" flood-opacity="0.18"/>
+            </filter>
+            <filter id="sky-clay" x="-15%" y="-15%" width="130%" height="130%">
+              <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0096cc" flood-opacity="0.2"/>
+            </filter>
+          </defs>
+          <!-- Floating pastel speech bubble -->
+          <rect x="24" y="24" width="190" height="122" rx="34" fill="#ffffff" filter="url(#soft-clay)"/>
+          <path d="M62 142 L48 172 L92 144 Z" fill="#ffffff"/>
+          <!-- Warm quote bars inside bubble -->
+          <rect x="52" y="54" width="134" height="18" rx="9" fill="#f080c0"/>
+          <rect x="52" y="84" width="104" height="16" rx="8" fill="#f2e8f2"/>
+          <rect x="52" y="110" width="76" height="16" rx="8" fill="#e2f5fc"/>
+          <!-- Heart badge -->
+          <circle cx="216" cy="54" r="30" fill="#fde8f4" filter="url(#soft-clay)"/>
+          <path d="M216 68 C216 68 198 57 198 46 C198 40 203 36 208 36 C212 36 215 38 216 41 C217 38 220 36 224 36 C229 36 234 40 234 46 C234 57 216 68 216 68 Z" fill="#c2207f"/>
+          <!-- Sky star pill -->
+          <rect x="136" y="156" width="122" height="52" rx="26" fill="#e2f5fc" filter="url(#sky-clay)"/>
+          <circle cx="164" cy="182" r="14" fill="#0096cc"/>
+          <path d="M164 173 L167 179 L173 180 L168 184 L169 190 L164 187 L159 190 L160 184 L155 180 L161 179 Z" fill="#ffffff"/>
+          <rect x="186" y="174" width="56" height="16" rx="8" fill="#7c52aa"/>
+        </svg>
+        <div class="badge-pill badge-pink">
+          <i data-lucide="message-circle" aria-hidden="true" width="15" height="15"></i>
+          <span>提論點 × 舉論據 × 寫出好文章</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation & Progress Strip -->
+    <nav class="jump-nav" aria-label="學習單元導覽">
+      <div class="jump-links">
+        <a href="#unit-1" class="jump-pill">
+          <i data-lucide="book-open" aria-hidden="true" width="16" height="16"></i>
+          <span>1. 基礎知識學習區</span>
+        </a>
+        <a href="#unit-2" class="jump-pill">
+          <i data-lucide="gamepad-2" aria-hidden="true" width="16" height="16"></i>
+          <span>2. 五關互動闖關</span>
+        </a>
+        <a href="#unit-3" class="jump-pill">
+          <i data-lucide="pen-tool" aria-hidden="true" width="16" height="16"></i>
+          <span>3. 五段式寫作實作</span>
+        </a>
+      </div>
+      <div class="score-pill" id="global-progress-pill" aria-live="polite">
+        <i data-lucide="star" aria-hidden="true" width="18" height="18"></i>
+        <span>已破關：<span id="cleared-count">0</span> / 5 關</span>
+      </div>
+    </nav>
+
+    <!-- UNIT 1: Foundation Knowledge -->
+    <section id="unit-1" class="section-block" aria-labelledby="unit1-heading">
+      <div class="section-header">
+        <div class="kicker">
+          <i data-lucide="layers" aria-hidden="true" width="16" height="16"></i>
+          <span>第一單元・議論文基礎知識學習區</span>
+        </div>
+        <h2 class="section-title" id="unit1-heading">議論文就像一個人：必須有<em>心臟、肌肉和骨幹</em></h2>
+        <p class="prose-lead">
+          如果你想說服同學接受你的看法，光說「我覺得這樣很好」是不夠的。點擊下方三張黏土卡片，認識議論文不可或缺的三個要素。
+        </p>
+      </div>
+
+      <!-- Interactive 3 Elements Cards -->
+      <div class="elements-grid" role="group" aria-label="議論文三要素選擇">
+        <button type="button" class="element-btn is-active" id="el-btn-point" onclick="selectElement('point')">
+          <div class="icon-bubble">
+            <i data-lucide="heart" aria-hidden="true" width="24" height="24"></i>
+          </div>
+          <h3 class="subhead">論點（文章的心臟）</h3>
+          <p class="muted-text">作者對於主題的核心主張或看法，通常在開頭明確點出。</p>
+        </button>
+
+        <button type="button" class="element-btn" id="el-btn-evidence" onclick="selectElement('evidence')">
+          <div class="icon-bubble icon-bubble--sky">
+            <i data-lucide="dumbbell" aria-hidden="true" width="24" height="24"></i>
+          </div>
+          <h3 class="subhead">論據（文章的肌肉）</h3>
+          <p class="muted-text">用來支持論點的故事、生活例子、道理或諺語數據。</p>
+        </button>
+
+        <button type="button" class="element-btn" id="el-btn-reasoning" onclick="selectElement('reasoning')">
+          <div class="icon-bubble icon-bubble--grape">
+            <i data-lucide="link-2" aria-hidden="true" width="24" height="24"></i>
+          </div>
+          <h3 class="subhead">論證（文章的骨幹）</h3>
+          <p class="muted-text">說明例子和論點之間為什麼有關聯，把兩者串連起來的思考過程。</p>
+        </button>
+      </div>
+
+      <div class="element-detail-panel" id="element-detail-panel" aria-live="polite">
+        <div>
+          <span class="badge-pill badge-pink" id="el-detail-badge">文章的心臟</span>
+          <h3 class="subhead" id="el-detail-title" style="margin-top: var(--space-sm);">什麼是「論點」？</h3>
+          <p id="el-detail-desc">論點就是你最想讓讀者記住的「核心想法」。在《高明說話術》裡，作者先引用俗語「良言一句三冬暖，惡語傷人六月寒」，接著明確提出主張：「好好說，說好話」才是最高明的說話術。</p>
+        </div>
+        <div class="callout-well">
+          <div class="badge-pill badge-grape" style="margin-bottom: var(--space-xs);">課堂小提問 / 寫作示範</div>
+          <p id="el-detail-example" style="margin: 0; font-weight: 700;">「與人說話時必須心懷善意，『好好說，說好話』才是最高明的說話術。」</p>
+        </div>
+      </div>
+
+      <!-- Structure Blueprint: 總—分—總 -->
+      <div class="clay-card clay-card--grape">
+        <div class="kicker kicker--grape">
+          <i data-lucide="layout-list" aria-hidden="true" width="16" height="16"></i>
+          <span>結構密碼：「總—分—總」五段式架構</span>
+        </div>
+        <h3 class="subhead">用「兩正一反」對比論證，說服力瞬間倍增</h3>
+        <p class="muted-text">先總括主張，中間安排兩個正面事例與一個反面事例對比證明，最後歸納總結。</p>
+        <div class="arch-strip">
+          <div class="arch-step">
+            <span class="badge-pill badge-pink">第一段・總起</span>
+            <strong>點出核心論點</strong>
+            <p class="muted-text" style="margin: 0;">引用諺語吸引讀者，寫出自己對「高明說話術」的主張。</p>
+          </div>
+          <div class="arch-step">
+            <span class="badge-pill badge-positive">第二段・正例一</span>
+            <strong>溫和幽默化解</strong>
+            <p class="muted-text" style="margin: 0;">舉出面臨別人犯錯時，用幽默代替指責的溫暖故事。</p>
+          </div>
+          <div class="arch-step">
+            <span class="badge-pill badge-positive">第三段・正例二</span>
+            <strong>體貼讚美鼓舞</strong>
+            <p class="muted-text" style="margin: 0;">舉出先肯定優點、再溫和建議，幫助對方重拾自信的故事。</p>
+          </div>
+          <div class="arch-step">
+            <span class="badge-pill badge-error">第四段・反例</span>
+            <strong>冷言惡語傷害</strong>
+            <p class="muted-text" style="margin: 0;">舉出衝動嘲諷或惡意發言引發對立與傷痕的反面例子。</p>
+          </div>
+          <div class="arch-step">
+            <span class="badge-pill badge-grape">第五段・總結</span>
+            <strong>呼應主張與期許</strong>
+            <p class="muted-text" style="margin: 0;">重申「話要說得好，心地先要好」，寫下對自己的期許。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Textbook Examples vs School Life Examples -->
+      <div class="section-header">
+        <h3 class="subhead">課文事例 × 校園生活大對照</h3>
+        <p class="muted-text">切換下方按鈕，看看課本裡的「石延年摔馬」、「設計公司主管」與「冷言惡語」，在五年級校園生活中會長成什麼樣子！</p>
+        <div class="segmented" role="group" aria-label="正反論據事例切換">
+          <button type="button" class="seg-btn" id="tab-case-pos1" aria-pressed="true" onclick="selectCase('pos1')">正例一：溫和幽默</button>
+          <button type="button" class="seg-btn" id="tab-case-pos2" aria-pressed="false" onclick="selectCase('pos2')">正例二：體貼讚美</button>
+          <button type="button" class="seg-btn" id="tab-case-neg" aria-pressed="false" onclick="selectCase('neg')">反例：冷言惡語</button>
+        </div>
+      </div>
+
+      <div class="story-compare-grid" id="case-compare-container" aria-live="polite">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Rhetoric & Sentence Pattern Toolkit -->
+      <div class="rhetoric-grid">
+        <div class="clay-card">
+          <div class="kicker">
+            <i data-lucide="quote" aria-hidden="true" width="15" height="15"></i>
+            <span>寫作法寶一</span>
+          </div>
+          <h3 class="subhead">引用諺語與歇後語點睛</h3>
+          <ul class="proverb-list">
+            <li class="proverb-item">
+              <strong>「良言一句三冬暖，惡語傷人六月寒。」</strong>
+              <span class="muted-text">適合用在文章開頭或結尾，點出好話與壞話的巨大差別。</span>
+            </li>
+            <li class="proverb-item">
+              <strong>「病從口入，禍從口出。」</strong>
+              <span class="muted-text">適合用在反例段，提醒大家說話不謹慎容易招來衝突。</span>
+            </li>
+            <li class="proverb-item">
+              <strong>「啞巴吃黃連——有苦說不出」</strong>
+              <span class="muted-text">歇後語能生動描寫被嚴厲批評後委屈、失去信心的心情。</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="clay-card clay-card--sky">
+          <div class="kicker kicker--sky">
+            <i data-lucide="git-merge" aria-hidden="true" width="15" height="15"></i>
+            <span>寫作法寶二</span>
+          </div>
+          <h3 class="subhead">善用「並列句型」讓論證更有條理</h3>
+          <ul class="proverb-list">
+            <li class="proverb-item">
+              <strong>「……能……，也能……」</strong>
+              <span class="muted-text">表示兩種好結果同時發生。例：一句幽默的話，能撫平緊張的情緒，也能保護珍貴的友誼。</span>
+            </li>
+            <li class="proverb-item">
+              <strong>「不僅……更能……」</strong>
+              <span class="muted-text">層層遞進加強說服力。例：受到主管鼓舞的設計師，不僅增加許多自信，更能交出不少精采的作品。</span>
+            </li>
+            <li class="proverb-item">
+              <strong>「贈人玫瑰，手有餘香」／「忍一時風平浪靜，退一步海闊天空」</strong>
+              <span class="muted-text">寫進學生作文開頭，立刻展現豐富的語文累積！</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIT 2: 5-Stage Interactive Quiz Game -->
+    <section id="unit-2" class="section-block" aria-labelledby="unit2-heading">
+      <div class="section-header">
+        <div class="kicker kicker--grape">
+          <i data-lucide="trophy" aria-hidden="true" width="16" height="16"></i>
+          <span>第二單元・五關互動測驗闖關遊戲</span>
+        </div>
+        <h2 class="section-title" id="unit2-heading">說話修煉場：挑戰<em>五大核心關卡</em></h2>
+        <p class="prose-lead">
+          學完心法就要上戰場啦！依序完成五個關卡，收集五顆說話小達人星星。你的答題進度會自動保存。
+        </p>
+      </div>
+
+      <div class="arena-panel">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs); gap: var(--space-sm); flex-wrap: wrap;">
+            <strong id="arena-progress-label">闖關進度：0 / 5 關完成</strong>
+            <span class="muted-text" id="arena-stars-label">已獲得 0 顆星星</span>
+          </div>
+          <div class="stage-progress-bar" aria-hidden="true">
+            <div class="stage-progress-fill" id="stage-progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- 5 Stage Buttons -->
+        <div class="stage-selector" role="group" aria-label="選擇測驗關卡">
+          <button type="button" class="stage-tab is-current" id="stage-btn-1" onclick="switchStage(1)">
+            <span>第 1 關<br><small>辨識論點</small></span>
+            <i data-lucide="heart" aria-hidden="true" width="18" height="18"></i>
+          </button>
+          <button type="button" class="stage-tab" id="stage-btn-2" onclick="switchStage(2)">
+            <span>第 2 關<br><small>正反分類</small></span>
+            <i data-lucide="layers" aria-hidden="true" width="18" height="18"></i>
+          </button>
+          <button type="button" class="stage-tab" id="stage-btn-3" onclick="switchStage(3)">
+            <span>第 3 關<br><small>論證連線</small></span>
+            <i data-lucide="link-2" aria-hidden="true" width="18" height="18"></i>
+          </button>
+          <button type="button" class="stage-tab" id="stage-btn-4" onclick="switchStage(4)">
+            <span>第 4 關<br><small>諺語句型</small></span>
+            <i data-lucide="sparkles" aria-hidden="true" width="18" height="18"></i>
+          </button>
+          <button type="button" class="stage-tab" id="stage-btn-5" onclick="switchStage(5)">
+            <span>第 5 關<br><small>大綱拼圖</small></span>
+            <i data-lucide="puzzle" aria-hidden="true" width="18" height="18"></i>
+          </button>
+        </div>
+
+        <!-- Dynamic Stage Workspace -->
+        <div class="stage-workspace" id="stage-workspace" aria-live="polite">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIT 3: Essay Writing Studio -->
+    <section id="unit-3" class="section-block" aria-labelledby="unit3-heading">
+      <div class="section-header">
+        <div class="kicker kicker--sky">
+          <i data-lucide="pen-tool" aria-hidden="true" width="16" height="16"></i>
+          <span>第三單元・議論文寫作實作區</span>
+        </div>
+        <h2 class="section-title" id="unit3-heading">打造你的《高明說話術》<em>五段式作文</em></h2>
+        <p class="prose-lead">
+          輪到你當作家了！你可以點選上方的「引導範例」快速載入靈感，再改成自己的校園故事。右方會即時幫你排版出完整文章，並檢查是否符合五年級議論文滿分指標。
+        </p>
+        <div class="helper-chips" role="group" aria-label="載入引導範例">
+          <button type="button" class="chip-btn" onclick="applyStarterPreset('textbook')">
+            <i data-lucide="lightbulb" aria-hidden="true" width="16" height="16"></i>
+            <span>載入範例 A：課本經典（良言三冬暖）</span>
+          </button>
+          <button type="button" class="chip-btn" onclick="applyStarterPreset('praise')">
+            <i data-lucide="lightbulb" aria-hidden="true" width="16" height="16"></i>
+            <span>載入範例 B：校園讚美（贈人玫瑰）</span>
+          </button>
+          <button type="button" class="chip-btn" onclick="applyStarterPreset('calm')">
+            <i data-lucide="lightbulb" aria-hidden="true" width="16" height="16"></i>
+            <span>載入範例 C：冷靜溝通（忍一時風平浪靜）</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="studio-layout">
+        <!-- Left: 5-Paragraph Interactive Outline Form -->
+        <div class="writer-form">
+          <!-- Paragraph 1 -->
+          <div class="field-card">
+            <label class="field-label" for="essay-proverb">
+              <span class="badge-pill badge-pink">第一段（總起）</span>
+              <span>選擇開頭諺語</span>
+            </label>
+            <select id="essay-proverb" class="clay-select" onchange="updateEssayField('proverb', this.value)">
+              <option value="「良言一句三冬暖，惡語傷人六月寒。」">「良言一句三冬暖，惡語傷人六月寒。」</option>
+              <option value="俗話說：「贈人玫瑰，手有餘香。」">俗話說：「贈人玫瑰，手有餘香。」</option>
+              <option value="「忍一時風平浪靜，退一步海闊天空。」">「忍一時風平浪靜，退一步海闊天空。」</option>
+              <option value="">（不選諺語，我想自己寫開頭）</option>
+            </select>
+
+            <label class="field-label" for="essay-p1" style="margin-top: var(--space-sm);">
+              <span>提出你的核心論點（文章的心臟）</span>
+            </label>
+            <span class="field-hint">引導：說明為什麼這句話很重要，並用「我認為……」提出你的主張。</span>
+            <textarea id="essay-p1" class="clay-textarea" oninput="updateEssayField('p1', this.value)" placeholder="例如：在日常生活中，與人互動必須心懷善意。我認為，「好好說，說好話」才是最高明的說話術。"></textarea>
+          </div>
+
+          <!-- Paragraph 2 -->
+          <div class="field-card">
+            <label class="field-label" for="essay-p2">
+              <span class="badge-pill badge-positive">第二段（正例一）</span>
+              <span>溫和幽默化解尷尬的故事與論證</span>
+            </label>
+            <span class="field-hint">引導：可以寫石延年摔馬，或校園裡不小心撞到人、打翻水壺時用幽默化解的故事，最後加上「不僅……更能……」說明好處。</span>
+            <textarea id="essay-p2" class="clay-textarea" oninput="updateEssayField('p2', this.value)" placeholder="例如：有一次走廊上同學不小心撞翻水壺，對方沒有生氣指責，反而幽默自嘲……這不僅化解了尷尬，更能保護珍貴的友誼。"></textarea>
+            <div class="helper-chips">
+              <button type="button" class="chip-btn" onclick="insertPhrase('p2', '這不僅能化解尷尬的氣氛，更能讓彼此感受到體貼與尊重。')">
+                <i data-lucide="plus" aria-hidden="true" width="15" height="15"></i>
+                <span>插入「不僅……更能……」論證句</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Paragraph 3 -->
+          <div class="field-card">
+            <label class="field-label" for="essay-p3">
+              <span class="badge-pill badge-positive">第三段（正例二）</span>
+              <span>體貼讚美鼓舞人心的故事與論證</span>
+            </label>
+            <span class="field-hint">引導：可以寫設計主管先肯定再建議，或做壁報、分組合作時稱讚組員再提出修改方向的故事。</span>
+            <textarea id="essay-p3" class="clay-textarea" oninput="updateEssayField('p3', this.value)" placeholder="例如：製作班級壁報時，組員畫錯了區域，組長先稱讚他的創意，再溫和提議補上小花變成背景……"></textarea>
+            <div class="helper-chips">
+              <button type="button" class="chip-btn" onclick="insertPhrase('p3', '先肯定優點再給建議，能讓同伴重拾自信，也能讓團隊合作更順利。')">
+                <i data-lucide="plus" aria-hidden="true" width="15" height="15"></i>
+                <span>插入「能……，也能……」論證句</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Paragraph 4 -->
+          <div class="field-card">
+            <label class="field-label" for="essay-p4">
+              <span class="badge-pill badge-error">第四段（反例）</span>
+              <span>冷言惡語造成傷害的反面故事與論證</span>
+            </label>
+            <span class="field-hint">引導：舉出網路惡意留言或球場上責罵隊友的事例，說明「病從口入，禍從口出」的嚴重後果。</span>
+            <textarea id="essay-p4" class="clay-textarea" oninput="updateEssayField('p4', this.value)" placeholder="例如：相反地，俗話說「病從口入，禍從口出」。如果隊友傳球失誤時就當眾指責……"></textarea>
+            <div class="helper-chips">
+              <button type="button" class="chip-btn" onclick="insertPhrase('p4', '俗話說：「病從口入，禍從口出。」尖酸的嘲諷不僅無法改變錯誤，更會摧毀彼此的信任。')">
+                <i data-lucide="plus" aria-hidden="true" width="15" height="15"></i>
+                <span>插入「病從口入，禍從口出」反例句</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Paragraph 5 -->
+          <div class="field-card">
+            <label class="field-label" for="essay-p5">
+              <span class="badge-pill badge-grape">第五段（總結）</span>
+              <span>呼應開頭論點，寫下自我期許</span>
+            </label>
+            <span class="field-hint">引導：總結「話要說得好，心地先要好」，期許自己讓話語成為暖人心房的力量。</span>
+            <textarea id="essay-p5" class="clay-textarea" oninput="updateEssayField('p5', this.value)" placeholder="例如：總而言之，話要說得好，心地先要好。我希望自己從今天起，做個心懷善意、懂得體貼別人的說話高手！"></textarea>
+          </div>
+        </div>
+
+        <!-- Right: Live Preview + Peer Review Checklist -->
+        <aside class="preview-panel" aria-label="作文即時預覽與檢核表">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm); flex-wrap: wrap;">
+            <h3 class="subhead" style="margin: 0;">我的《高明說話術》文章預覽</h3>
+            <span class="badge-pill badge-sky" id="word-count-badge">目前字數：0 字</span>
+          </div>
+
+          <div class="essay-paper" id="essay-preview-box" aria-live="polite">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div>
+            <h4 class="subhead" style="font-size: 1rem;">作文修改與同儕互評檢核表</h4>
+            <div class="checklist-box" id="essay-checklist">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button type="button" class="btn btn-primary" onclick="downloadEssay()">
+              <i data-lucide="download" aria-hidden="true" width="18" height="18"></i>
+              <span>下載作文大綱 (.txt)</span>
+            </button>
+            <button type="button" class="btn btn-soft" onclick="copyEssayText()">
+              <i data-lucide="copy" aria-hidden="true" width="18" height="18"></i>
+              <span>複製全文</span>
+            </button>
+            <button type="button" class="btn btn-soft" id="reset-all-btn" onclick="handleResetAll(this)">
+              <i data-lucide="rotate-ccw" aria-hidden="true" width="18" height="18"></i>
+              <span>清除全部重練</span>
+            </button>
+          </div>
+          <div id="studio-status-msg" class="muted-text" aria-live="polite"></div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="source-footer">
+      <div>
+        <strong>學習資源出處：</strong>依據國小五年級國語文《高明說話術》教學設計整理（含「總—分—總」五段式架構、石延年摔馬與設計主管課文事例、校園生活對比範例及同儕互評指標）。
+      </div>
+      <div>
+        <span>五年級議論文互動學習站</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <api-shim></api-shim>
+  <script>
+    // =========================================================================
+    // 1. Static Curricular Data (Backtick literals throughout)
+    // =========================================================================
+    const ELEMENTS_DATA = {
+      point: {
+        badge: `文章的心臟`,
+        badgeClass: `badge-pill badge-pink`,
+        title: `什麼是「論點」？`,
+        desc: `論點就是你最想讓讀者記住的「核心主張」。想說服同學時，一定要在開頭用清楚的話寫出自己的立場。在《高明說話術》裡，作者先用俗語「良言一句三冬暖，惡語傷人六月寒」開場，再點出核心論點。`,
+        example: `「與人說話時必須心懷善意，『好好說，說好話』才是最高明的說話術。」`
+      },
+      evidence: {
+        badge: `文章的肌肉`,
+        badgeClass: `badge-pill badge-sky`,
+        title: `什麼是「論據」？`,
+        desc: `光講自己的想法還不夠，必須拿出「證據」讓別人信服！論據就是用來支持論點的故事、生活例子、道理或俗語。課本特別安排了「兩個正面例子 ＋ 一個反面例子」來支撐文章。`,
+        example: `正面論據：石延年摔馬自嘲、設計主管先肯定再建議；反面論據：網路惡意發言與球場斥責隊友。`
+      },
+      reasoning: {
+        badge: `文章的骨幹`,
+        badgeClass: `badge-pill badge-grape`,
+        title: `什麼是「論證」？`,
+        desc: `論證是「把故事和論點連起來的思考說明」。講完故事後，要告訴讀者：「為什麼這個例子可以證明我的論點？」這時很適合用「不僅……更能……」或「能……，也能……」來說明道理！`,
+        example: `「面對他人錯誤，以溫和幽默代替指責，同理對方心情，不僅有利於解決問題，也能化解緊張氣氛。」`
+      }
+    };
+
+    const CASES_DATA = {
+      pos1: {
+        textbookTag: `課本事例・宋朝石延年`,
+        textbookTitle: `正例一：石延年摔馬的幽默`,
+        textbookQuote: `「幸好我是『石』學士，如果換成『瓦』學士，不就摔碎了！」`,
+        textbookStory: `宋朝石延年乘馬出遊，因為馬夫的失誤而摔下馬。看著嚇得直冒冷汗、不知所措的馬夫，石延年沒有生氣罵人，反而打趣自我解嘲。`,
+        textbookReasoning: `論證道理：面對他人的無心之過，以溫和幽默代替指責，同理對方緊張的心情，不僅有利於解決問題，也能化解尷尬氣氛。`,
+        schoolTag: `校園生活・走廊小意外`,
+        schoolTitle: `正例一：水壺灑了一地的防護墊`,
+        schoolQuote: `「幸好我有胖胖的肚子當防護墊，不然地板就被你撞凹了！」`,
+        schoolStory: `下課在走廊奔跑時，小明不小心撞倒了小華，水壺的水灑了一地。小明嚇得連忙道歉，小華沒有大聲斥責，反而笑著打趣化解緊張。`,
+        schoolReasoning: `論證道理：在校園中，用一句幽默的打趣代替尖銳的責罵，能撫平慌張情緒，更能保護珍貴的友誼。`
+      },
+      pos2: {
+        textbookTag: `課本事例・設計公司兩組主管`,
+        textbookTitle: `正例二：先肯定優點的設計主管`,
+        textbookQuote: `「只要能這樣修飾一下，那就更好了！」`,
+        textbookStory: `設計公司的兩組主管風格完全不同：一組直言批評作品，讓設計師「啞巴吃黃連」失去信心；另一組主管先肯定優點，再溫和具體指出可以改進的地方。`,
+        textbookReasoning: `論證道理：受到主管體貼鼓舞的設計師，不僅增加許多自信，更交出不少精采的作品。`,
+        schoolTag: `校園生活・班級壁報製作`,
+        schoolTitle: `正例二：把畫錯的地方變成小花背景`,
+        schoolQuote: `「如果我們在這裡補上一朵小花，剛好可以把畫錯的地方變成背景喔！」`,
+        schoolStory: `製作壁報時，組員不小心畫錯了區域。組長沒有當場責怪他「亂畫」，而是先稱讚他的圖案設計很有創意，再溫和引導補救方法。`,
+        schoolReasoning: `論證道理：先肯定優點再提建議的說話方式，能維持團隊士氣，讓同伴重拾自信並圓滿完成工作。`
+      },
+      neg: {
+        textbookTag: `課本事例・新聞與網路社群`,
+        textbookTitle: `反例：針鋒相對與網路惡言`,
+        textbookQuote: `「病從口入，禍從口出。」`,
+        textbookStory: `課本指出，新聞中常見公眾人物針鋒相對，網路社群也有人隨意發言、留下充滿惡意的字眼，完全不顧別人感受。`,
+        textbookReasoning: `論證道理：冷言惡語傳到現實生活中，常會引發雙方對立，甚至造成肢體衝突，是令人心情不快的禍源。`,
+        schoolTag: `校園生活・班際籃球賽`,
+        schoolTitle: `反例：球場上斥責失誤的隊友`,
+        schoolQuote: `「你會不會打球啊！真拖累大家！」`,
+        schoolStory: `班際籃球賽時，隊友傳球失誤輸掉關鍵一分。某位同學在場上大聲指責嘲諷，結果兩人當場拉扯吵架，隊友難過得再也不願參加練習。`,
+        schoolReasoning: `論證道理：逞一時口舌之快說出的尖酸話語，不僅無法改變失誤，更會摧毀彼此的信任，留下難以挽回的傷痕。`
+      }
+    };
+
+    // Stage 1: Identify Thesis Questions
+    const STAGE1_QUESTIONS = [
+      {
+        prompt: `題目 1 / 3：下面哪一張卡片是議論文開頭的「論點（核心主張）」？`,
+        options: [
+          { text: `宋朝的石延年有一次騎馬出遊，因為馬夫失誤而摔下馬。`, correct: false, reason: `這是用來支持文章的故事「論據」，還不是作者的主張喔！` },
+          { text: `與人說話時必須心懷善意，「好好說，說好話」才是最高明的說話術。`, correct: true, reason: `答對了！這句話清楚說出作者對「說話術」的核心看法，就是文章的「論點」。` },
+          { text: `今天下課的時候，小明在走廊上奔跑，結果水壺的水灑了一地。`, correct: false, reason: `這是校園生活裡發生的事件經過，屬於故事「論據」。` }
+        ]
+      },
+      {
+        prompt: `題目 2 / 3：想寫一篇關於「讚美力量」的議論文，哪一句最適合當作「論點」？`,
+        options: [
+          { text: `在人際互動中，我認為「懂得換位思考，多給予讚美」就是最高明的說話術。`, correct: true, reason: `太棒了！用「我認為……」明確表達核心立場，讓讀者一眼看懂重點。` },
+          { text: `製作壁報的時候，組員不小心把標題旁邊的區域畫錯了。`, correct: false, reason: `這只是故事的開端情節（論據），還沒點出你想說服別人的道理。` },
+          { text: `設計公司裡有兩位主管，第一位主管直接批評設計師的作品不好。`, correct: false, reason: `這是人物事例（論據），要用來證明論點，不能代替論點。` }
+        ]
+      },
+      {
+        prompt: `題目 3 / 3：寫作文開頭時，如果先引用了俗語，哪一句才是真正的「論點」？`,
+        options: [
+          { text: `「忍一時風平浪靜，退一步海闊天空。」`, correct: false, reason: `這是開頭用來吸引讀者的「諺語名言」，接下來還要寫出你自己的主張喔！` },
+          { text: `班際籃球賽時，隊友傳球失誤，兩位同學當場在球場上拉扯吵架。`, correct: false, reason: `這是反面故事（論據），用來提醒大家壞話的後果。` },
+          { text: `面對意見不合與衝突時保持冷靜，用溫和態度溝通，才是高明的說話術。`, correct: true, reason: `完全正確！引用諺語之後，再清楚寫出「溫和溝通才是高明說話術」就是核心論點！` }
+        ]
+      }
+    ];
+
+    // Stage 2: Sort Positive vs Negative Evidence
+    const STAGE2_ITEMS = [
+      { id: `s2_1`, text: `石延年摔下馬後沒有責怪馬夫，反而自嘲「幸好我是石學士，不然就摔碎了」。`, answer: `pos`, explain: `這是「溫和幽默」的正面論據，能化解危機。` },
+      { id: `s2_2`, text: `設計主管先肯定作品優點，再溫和建議：「只要能這樣修飾一下，那就更好了！」`, answer: `pos`, explain: `這是「體貼讚美」的正面論據，能鼓舞信心。` },
+      { id: `s2_3`, text: `籃球賽隊友傳球失誤時，當場大聲指責：「你會不會打球啊！真拖累大家！」`, answer: `neg`, explain: `這是「冷言惡語」的反面論據，會摧毀信任。` },
+      { id: `s2_4`, text: `小華被撞翻水壺，反而笑說：「幸好我有胖胖的肚子當防護墊！」`, answer: `pos`, explain: `這是校園裡的幽默「正面論據」，能保護友誼。` },
+      { id: `s2_5`, text: `網路社群裡有人隨意留下充滿惡意的嘲諷留言，引發雙方對立衝突。`, answer: `neg`, explain: `這是「冷言惡語」的反面論據，印證禍從口出。` },
+      { id: `s2_6`, text: `設計主管直接嚴厲批評作品，讓設計師「啞巴吃黃連」般委屈失去信心。`, answer: `neg`, explain: `缺乏體貼的批評會打擊他人自信，屬於反面事例。` }
+    ];
+
+    // Stage 3: Matching Evidence -> Reasoning
+    const STAGE3_PAIRS = [
+      { id: `p1`, left: `石延年摔馬後笑稱自己是「石」學士`, right: `用溫和幽默代替指責，能化解對方的緊張與尷尬。` },
+      { id: `p2`, left: `設計主管先肯定優點，再具體給建議`, right: `體貼讚美能增加他人自信，激發出更精采的表現。` },
+      { id: `p3`, left: `球場上大聲斥責失誤的隊友拖累大家`, right: `尖酸嘲諷無法改變錯誤，只會摧毀團隊彼此的信任。` },
+      { id: `p4`, left: `壁報組長提議把畫錯處補成小花背景`, right: `換位思考與正向引導，能維持士氣並圓滿完成任務。` }
+    ];
+
+    // Stage 4: Rhetoric & Parallel Sentences
+    const STAGE4_QUESTIONS = [
+      {
+        prompt: `題目 1 / 4：想在作文開頭對比「好話讓人溫暖、壞話讓人心寒」，最適合引用哪句諺語？`,
+        options: [
+          { text: `良言一句三冬暖，惡語傷人六月寒。`, correct: true, reason: `沒錯！冬天的溫暖與六月的寒冷形成強烈對比，最適合《高明說話術》開頭。` },
+          { text: `一分耕耘，一分收穫。`, correct: false, reason: `這句諺語強調的是努力與收穫，和「說話態度」比較無關喔。` },
+          { text: `失敗為成功之母。`, correct: false, reason: `這句比較適合寫面對挫折或學習失敗的主題。` }
+        ]
+      },
+      {
+        prompt: `題目 2 / 4：設計師被主管直言批評後有苦說不出，課本用了哪句歇後語來形容？`,
+        options: [
+          { text: `竹籃打水——一場空`, correct: false, reason: `竹籃打水是指白費力氣，不是有苦說不出喔。` },
+          { text: `啞巴吃黃連——有苦說不出`, correct: true, reason: `答對了！黃連很苦，啞巴又說不出口，生動形容滿腹委屈的感受。` },
+          { text: `泥菩薩過江——自身難保`, correct: false, reason: `這句形容自己都遇到困難，無法幫助別人。` }
+        ]
+      },
+      {
+        prompt: `題目 3 / 4：進入第四段「反面例子」時，提醒大家說話不慎會惹來麻煩，最適合引用？`,
+        options: [
+          { text: `病從口入，禍從口出。`, correct: true, reason: `完全正確！「禍從口出」精準點出冷言惡語會引發衝突與禍端。` },
+          { text: `三個臭皮匠，勝過一個諸葛亮。`, correct: false, reason: `這句是在稱讚團結合作的力量喔。` },
+          { text: `讀萬卷書，行萬里路。`, correct: false, reason: `這句勉勵大家多閱讀與體驗生活。` }
+        ]
+      },
+      {
+        prompt: `題目 4 / 4：想用並列句型把「增加自信」和「交出精采作品」連接起來，哪一組連接詞最通順？`,
+        options: [
+          { text: `雖然……但是……（雖然增加自信，但是交出作品）`, correct: false, reason: `「雖然……但是……」是轉折關係，兩件事都是好結果時不適合轉折。` },
+          { text: `不僅……更能……（不僅增加許多自信，更能交出精采作品）`, correct: true, reason: `太棒了！「不僅……更能……」讓句子有層次又更有說服力！` },
+          { text: `不是……就是……（不是增加自信，就是交出作品）`, correct: false, reason: `「不是……就是……」表示二選一，但這兩件好事是同時發生的喔！` }
+        ]
+      }
+    ];
+
+    // Stage 5: 5-Paragraph Sequence Puzzle
+    const STAGE5_CORRECT_ORDER = [
+      { id: `sec1`, tag: `總起`, text: `【開頭】引用「良言一句三冬暖」，明確寫出「好好說，說好話」的核心論點。` },
+      { id: `sec2`, tag: `正例一`, text: `【中間段】舉出石延年摔馬或走廊水壺的幽默故事，論證溫和態度能化解尷尬。` },
+      { id: `sec3`, tag: `正例二`, text: `【中間段】舉出設計主管或壁報組長的讚美事例，論證先肯定再建議能鼓舞人心。` },
+      { id: `sec4`, tag: `反例`, text: `【中間段】舉出網路惡言或球場斥責失誤隊友的反例，論證冷言惡語會摧毀信任。` },
+      { id: `sec5`, tag: `總結`, text: `【結尾】呼應開頭主張，重申「話要說得好，心地先要好」與自我期許。` }
+    ];
+
+    const ESSAY_PRESETS = {
+      textbook: {
+        proverb: `「良言一句三冬暖，惡語傷人六月寒。」`,
+        p1: `在人際互動中，說話的態度往往決定了事情的結果。我認為，與人說話時必須心懷善意，「好好說，說好話」才是最高明的說話術。`,
+        p2: `面對別人的無心之過，用溫和幽默代替指責能化解危機。就像宋朝的石延年因馬夫失誤而摔下馬，他非但沒有生氣，反而打趣自己姓「石」不會摔碎，讓嚇出冷汗的馬夫立刻安心。這不僅有利於解決問題，更能化解緊張的氣氛。`,
+        p3: `此外，先肯定優點再給予建議，更能鼓舞人心。設計公司的主管面對修改作品時，先讚美設計師的長處，再溫和指出「只要能這樣修飾一下，那就更好了」。受到鼓舞的設計師不僅增加許多自信，更能交出精采的作品。`,
+        p4: `相反地，俗話說：「病從口入，禍從口出。」如果總是口出惡言或尖酸嘲諷，就像新聞和網路上常見的惡意留言，不僅無法解決問題，更會引發彼此的對立與衝突，成為傷害人心的禍源。`,
+        p5: `總而言之，話要說得好，心地先要好。只要我們學會用幽默與體貼的話語溝通，讓話語成為暖人心房的力量，就能成為一位受人歡迎的說話高手。`
+      },
+      praise: {
+        proverb: `俗話說：「贈人玫瑰，手有餘香。」`,
+        p1: `在班級與家庭生活中，一句真誠的讚美往往能拉近彼此的距離。我認為，「懂得換位思考，多給予體貼的讚美」就是最高明的說話術。`,
+        p2: `當同學不小心犯錯時，幽默的話語能保護友誼。有一次在走廊上，同學不小心撞翻了水壺，嚇得連忙道歉，我笑著說：「幸好我的肚子像防護墊一樣彈性很好！」這不僅化解了尷尬，更能讓同學感受到我的包容。`,
+        p3: `當同伴遇到困難時，肯定優點會帶來神奇的力量。上次製作班級壁報，組員不小心畫錯區域，組長先稱讚他的圖案很有創意，再提議補上一朵小花變成背景。這種溫和引導能維持團隊士氣，也能讓大家開心地完成任務。`,
+        p4: `相反地，「病從口入，禍從口出。」如果像班際籃球賽時，因為隊友傳球失誤就大聲斥責他拖累大家，只會讓隊友像啞巴吃黃連一樣委屈，甚至摧毀團隊的信任。`,
+        p5: `因此，一句好話能溫暖人心，一句壞話卻會留下傷痕。我期許自己時常記住「贈人玫瑰，手有餘香」，多用讚美與微笑和同學相處。`
+      },
+      calm: {
+        proverb: `「忍一時風平浪靜，退一步海闊天空。」`,
+        p1: `當我和別人意見不合時，如果衝動發火，往往會讓事情變得更糟糕。我認為，「面對衝突時保持冷靜，用溫和態度溝通」才是高明的說話術。`,
+        p2: `保持冷靜加上一點幽默，常能讓火氣瞬間降溫。就像課本裡的石延年面對馬夫失誤時沒有發脾氣，反而用姓名開了個小玩笑。他同理對方緊張的心情，不僅讓問題順利解決，更展現了自己的好修養。`,
+        p3: `在團隊討論出現不同意見時，先肯定對方再說出想法也很重要。分組做自然實驗時，組員提出的方法不太順暢，我先肯定他很用心找資料，再溫和建議：「如果換成另一種器材試試看，會不會更清楚呢？」對方開心地點頭答應了。`,
+        p4: `相反地，如果在衝突當下逞一時口舌之快，說出尖酸刻薄的話，就像網路上那些不負責任的惡意批評一樣，不僅無法說服別人，更會讓原本的小誤會變成大吵架。`,
+        p5: `話要說得好，心地先要好。我希望自己以後遇到摩擦時，都能先深呼吸保持冷靜，用溫和又有智慧的說話術化解每一場風波。`
+      }
+    };
+
+    // =========================================================================
+    // 2. Mutable Application State (Persisted via notebookAppApi)
+    // =========================================================================
+    let appState = {
+      activeElement: `point`,
+      activeCase: `pos1`,
+      activeStage: 1,
+      stage1: { qIndex: 0, answers: [null, null, null], cleared: false },
+      stage2: { selections: {}, checked: false, cleared: false },
+      stage3: { selectedLeft: null, matchedIds: [], wrongFlash: null, cleared: false },
+      stage4: { qIndex: 0, answers: [null, null, null, null], cleared: false },
+      stage5: { orderIds: [`sec3`, `sec1`, `sec5`, `sec2`, `sec4`], checked: false, cleared: false },
+      essay: {
+        proverb: `「良言一句三冬暖，惡語傷人六月寒。」`,
+        p1: ``,
+        p2: ``,
+        p3: ``,
+        p4: ``,
+        p5: ``
+      }
+    };
+
+    function restoreState(saved) {
+      if (!saved || typeof saved !== `object`) return;
+      if (saved.activeElement && ELEMENTS_DATA[saved.activeElement]) appState.activeElement = saved.activeElement;
+      if (saved.activeCase && CASES_DATA[saved.activeCase]) appState.activeCase = saved.activeCase;
+      if (typeof saved.activeStage === `number` && saved.activeStage >= 1 && saved.activeStage <= 5) {
+        appState.activeStage = saved.activeStage;
+      }
+      if (saved.stage1) appState.stage1 = Object.assign({}, appState.stage1, saved.stage1);
+      if (saved.stage2) appState.stage2 = Object.assign({}, appState.stage2, saved.stage2);
+      if (saved.stage3) appState.stage3 = Object.assign({}, appState.stage3, saved.stage3);
+      if (saved.stage4) appState.stage4 = Object.assign({}, appState.stage4, saved.stage4);
+      if (saved.stage5 && Array.isArray(saved.stage5.orderIds) && saved.stage5.orderIds.length === 5) {
+        appState.stage5 = Object.assign({}, appState.stage5, saved.stage5);
+      }
+      if (saved.essay) appState.essay = Object.assign({}, appState.essay, saved.essay);
+    }
+
+    async function saveState() {
+      if (window.notebookAppApi) {
+        try {
+          await window.notebookAppApi.setAppState(appState);
+        } catch (err) {
+          // Ignore transient host errors cleanly
+        }
+      }
+    }
+
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === `function`) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // =========================================================================
+    // 3. Unit 1 Render & Handlers
+    // =========================================================================
+    function selectElement(key) {
+      if (!ELEMENTS_DATA[key]) return;
+      appState.activeElement = key;
+      renderElementExplorer();
+      saveState();
+    }
+
+    function renderElementExplorer() {
+      const keys = [`point`, `evidence`, `reasoning`];
+      keys.forEach(function (k) {
+        const btn = document.getElementById(`el-btn-` + k);
+        if (btn) btn.classList.toggle(`is-active`, appState.activeElement === k);
+      });
+      const data = ELEMENTS_DATA[appState.activeElement];
+      const badge = document.getElementById(`el-detail-badge`);
+      const title = document.getElementById(`el-detail-title`);
+      const desc = document.getElementById(`el-detail-desc`);
+      const ex = document.getElementById(`el-detail-example`);
+      if (badge) {
+        badge.className = data.badgeClass;
+        badge.textContent = data.badge;
+      }
+      if (title) title.textContent = data.title;
+      if (desc) desc.textContent = data.desc;
+      if (ex) ex.textContent = data.example;
+    }
+
+    function selectCase(key) {
+      if (!CASES_DATA[key]) return;
+      appState.activeCase = key;
+      renderCaseCompare();
+      saveState();
+    }
+
+    function renderCaseCompare() {
+      const keys = [`pos1`, `pos2`, `neg`];
+      keys.forEach(function (k) {
+        const btn = document.getElementById(`tab-case-` + k);
+        if (btn) btn.setAttribute(`aria-pressed`, appState.activeCase === k ? `true` : `false`);
+      });
+      const item = CASES_DATA[appState.activeCase];
+      const container = document.getElementById(`case-compare-container`);
+      if (!container || !item) return;
+
+      const isNeg = appState.activeCase === `neg`;
+      const tagBadge = isNeg ? `badge-error` : `badge-positive`;
+
+      container.innerHTML = `
+        <article class="story-card">
+          <span class="badge-pill ${tagBadge}">${item.textbookTag}</span>
+          <h4 class="subhead" style="margin: 0;">${item.textbookTitle}</h4>
+          <p style="margin: 0;">${item.textbookStory}</p>
+          <div class="story-quote">${item.textbookQuote}</div>
+          <p class="muted-text" style="margin: 0;"><strong>${item.textbookReasoning}</strong></p>
+        </article>
+        <article class="story-card story-card--school">
+          <span class="badge-pill badge-sky">${item.schoolTag}</span>
+          <h4 class="subhead" style="margin: 0;">${item.schoolTitle}</h4>
+          <p style="margin: 0;">${item.schoolStory}</p>
+          <div class="story-quote story-quote--sky">${item.schoolQuote}</div>
+          <p class="muted-text" style="margin: 0;"><strong>${item.schoolReasoning}</strong></p>
+        </article>
+      `;
+    }
+
+    // =========================================================================
+    // 4. Unit 2: 5-Stage Game Logic
+    // =========================================================================
+    function updateGlobalProgress() {
+      let cleared = 0;
+      if (appState.stage1.cleared) cleared++;
+      if (appState.stage2.cleared) cleared++;
+      if (appState.stage3.cleared) cleared++;
+      if (appState.stage4.cleared) cleared++;
+      if (appState.stage5.cleared) cleared++;
+
+      const countEl = document.getElementById(`cleared-count`);
+      const labelEl = document.getElementById(`arena-progress-label`);
+      const starsEl = document.getElementById(`arena-stars-label`);
+      const fillEl = document.getElementById(`stage-progress-fill`);
+
+      if (countEl) countEl.textContent = String(cleared);
+      if (labelEl) labelEl.textContent = `闖關進度：${cleared} / 5 關完成`;
+      if (starsEl) starsEl.textContent = `已獲得 ${cleared} 顆說話小達人星星`;
+      if (fillEl) fillEl.style.width = `${(cleared / 5) * 100}%`;
+
+      for (let i = 1; i <= 5; i++) {
+        const btn = document.getElementById(`stage-btn-` + i);
+        if (!btn) continue;
+        btn.classList.toggle(`is-current`, appState.activeStage === i);
+        btn.classList.toggle(`is-done`, Boolean(appState[`stage` + i].cleared));
+      }
+    }
+
+    function switchStage(stageNum) {
+      if (stageNum < 1 || stageNum > 5) return;
+      appState.activeStage = stageNum;
+      renderArena();
+      saveState();
+    }
+
+    function renderArena() {
+      updateGlobalProgress();
+      const ws = document.getElementById(`stage-workspace`);
+      if (!ws) return;
+
+      if (appState.activeStage === 1) renderStage1(ws);
+      else if (appState.activeStage === 2) renderStage2(ws);
+      else if (appState.activeStage === 3) renderStage3(ws);
+      else if (appState.activeStage === 4) renderStage4(ws);
+      else if (appState.activeStage === 5) renderStage5(ws);
+
+      refreshIcons();
+    }
+
+    // --- Stage 1 ---
+    function renderStage1(ws) {
+      const st = appState.stage1;
+      const q = STAGE1_QUESTIONS[st.qIndex];
+      const chosenIdx = st.answers[st.qIndex];
+      const allAnsweredCorrect = STAGE1_QUESTIONS.every(function (item, idx) {
+        const ans = st.answers[idx];
+        return ans !== null && item.options[ans] && item.options[ans].correct;
+      });
+
+      let feedbackHtml = ``;
+      if (chosenIdx !== null && q.options[chosenIdx]) {
+        const opt = q.options[chosenIdx];
+        const cls = opt.correct ? `feedback-banner--ok` : `feedback-banner--warn`;
+        const iconName = opt.correct ? `check-circle-2` : `alert-triangle`;
+        feedbackHtml = `
+          <div class="feedback-banner ${cls}">
+            <i data-lucide="${iconName}" aria-hidden="true" width="20" height="20"></i>
+            <span>${opt.reason}</span>
+          </div>
+        `;
+      }
+
+      const optionsHtml = q.options.map(function (opt, idx) {
+        let extraCls = ``;
+        if (chosenIdx === idx) {
+          extraCls = opt.correct ? `is-correct` : `is-wrong`;
+        }
+        return `
+          <button type="button" class="choice-card ${extraCls}" onclick="answerStage1(${idx})">
+            <span class="badge-pill badge-grape">選項 ${idx + 1}</span>
+            <strong style="line-height: 1.5;">${opt.text}</strong>
+          </button>
+        `;
+      }).join(``);
+
+      const navBtns = `
+        <div class="action-row" style="justify-content: space-between;">
+          <div class="action-row">
+            <button type="button" class="btn btn-soft btn-small" onclick="moveStage1(-1)" ${st.qIndex === 0 ? `disabled` : ``}>上一題</button>
+            <button type="button" class="btn btn-soft btn-small" onclick="moveStage1(1)" ${st.qIndex === STAGE1_QUESTIONS.length - 1 ? `disabled` : ``}>下一題</button>
+          </div>
+          ${allAnsweredCorrect ? `<button type="button" class="btn btn-primary btn-small" onclick="switchStage(2)">過關！前往第 2 關 →</button>` : ``}
+        </div>
+      `;
+
+      ws.innerHTML = `
+        <div>
+          <span class="badge-pill badge-pink">第一關：辨識論點卡片</span>
+          <h3 class="subhead" style="margin-top: var(--space-xs);">${q.prompt}</h3>
+          <p class="muted-text" style="margin: 0;">提示：論點是作者的核心主張（我認為……），不是舉例故事本身喔！</p>
+        </div>
+        <div class="choice-grid">${optionsHtml}</div>
+        ${feedbackHtml}
+        ${navBtns}
+      `;
+    }
+
+    function answerStage1(optIdx) {
+      const st = appState.stage1;
+      st.answers[st.qIndex] = optIdx;
+      const allCorrect = STAGE1_QUESTIONS.every(function (item, idx) {
+        const ans = st.answers[idx];
+        return ans !== null && item.options[ans] && item.options[ans].correct;
+      });
+      if (allCorrect) st.cleared = true;
+      renderArena();
+      saveState();
+    }
+
+    function moveStage1(delta) {
+      const next = appState.stage1.qIndex + delta;
+      if (next >= 0 && next < STAGE1_QUESTIONS.length) {
+        appState.stage1.qIndex = next;
+        renderArena();
+        saveState();
+      }
+    }
+
+    // --- Stage 2 ---
+    function renderStage2(ws) {
+      const st = appState.stage2;
+      const allSelected = STAGE2_ITEMS.every(function (item) {
+        return st.selections[item.id] === `pos` || st.selections[item.id] === `neg`;
+      });
+
+      const itemsHtml = STAGE2_ITEMS.map(function (item) {
+        const sel = st.selections[item.id] || ``;
+        let statusBadge = ``;
+        if (st.checked) {
+          if (sel === item.answer) {
+            statusBadge = `<span class="badge-pill badge-positive">分類正確・${item.explain}</span>`;
+          } else {
+            statusBadge = `<span class="badge-pill badge-error">再想一下・這屬於${item.answer === `pos` ? `正面` : `反面`}論據</span>`;
+          }
+        }
+        return `
+          <div class="sort-item">
+            <div class="sort-item-text">
+              <div>${item.text}</div>
+              ${statusBadge ? `<div style="margin-top: var(--space-xs);">${statusBadge}</div>` : ``}
+            </div>
+            <div class="sort-actions">
+              <button type="button" class="sort-btn ${sel === `pos` ? `selected-pos` : ``}" onclick="setStage2Choice('${item.id}', 'pos')">
+                <i data-lucide="thumbs-up" aria-hidden="true" width="16" height="16"></i>
+                <span>正面論據</span>
+              </button>
+              <button type="button" class="sort-btn ${sel === `neg` ? `selected-neg` : ``}" onclick="setStage2Choice('${item.id}', 'neg')">
+                <i data-lucide="thumbs-down" aria-hidden="true" width="16" height="16"></i>
+                <span>反面論據</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join(``);
+
+      let summaryHtml = ``;
+      if (st.checked) {
+        const score = STAGE2_ITEMS.filter(function (i) { return st.selections[i.id] === i.answer; }).length;
+        if (score === STAGE2_ITEMS.length) {
+          summaryHtml = `
+            <div class="feedback-banner feedback-banner--ok">
+              <i data-lucide="check-circle-2" aria-hidden="true" width="20" height="20"></i>
+              <span>全部分類正確（6 / 6）！你已經非常清楚「正面暖心舉例」和「反面惡言舉例」的差別了！</span>
+            </div>
+          `;
+        } else {
+          summaryHtml = `
+            <div class="feedback-banner feedback-banner--warn">
+              <i data-lucide="alert-triangle" aria-hidden="true" width="20" height="20"></i>
+              <span>目前答對 ${score} / 6 題，看看紅色的提示，調整後再檢查一次吧！</span>
+            </div>
+          `;
+        }
+      }
+
+      ws.innerHTML = `
+        <div>
+          <span class="badge-pill badge-sky">第二關：正反論據分類</span>
+          <h3 class="subhead" style="margin-top: var(--space-xs);">把六張生活故事卡，分進「正面論據」或「反面論據」</h3>
+          <p class="muted-text" style="margin: 0;">溫和幽默、體貼讚美能帶來好結果，是正面論據；冷言嘲諷會傷人引發衝突，是反面論據。</p>
+        </div>
+        <div class="sort-list">${itemsHtml}</div>
+        ${summaryHtml}
+        <div class="action-row" style="justify-content: space-between;">
+          <button type="button" class="btn btn-primary" onclick="checkStage2()" ${!allSelected ? `disabled` : ``}>
+            <i data-lucide="check" aria-hidden="true" width="18" height="18"></i>
+            <span>${allSelected ? `檢查分類結果` : `請先幫全部 6 張卡片分類`}</span>
+          </button>
+          ${st.cleared ? `<button type="button" class="btn btn-secondary btn-small" onclick="switchStage(3)">過關！前往第 3 關 →</button>` : ``}
+        </div>
+      `;
+    }
+
+    function setStage2Choice(itemId, choice) {
+      appState.stage2.selections[itemId] = choice;
+      appState.stage2.checked = false;
+      renderArena();
+      saveState();
+    }
+
+    function checkStage2() {
+      appState.stage2.checked = true;
+      const allCorrect = STAGE2_ITEMS.every(function (i) { return appState.stage2.selections[i.id] === i.answer; });
+      if (allCorrect) appState.stage2.cleared = true;
+      renderArena();
+      saveState();
+    }
+
+    // --- Stage 3 ---
+    const STAGE3_RIGHT_SHUFFLED = [
+      STAGE3_PAIRS[2],
+      STAGE3_PAIRS[0],
+      STAGE3_PAIRS[3],
+      STAGE3_PAIRS[1]
+    ];
+
+    function renderStage3(ws) {
+      const st = appState.stage3;
+      const leftHtml = STAGE3_PAIRS.map(function (p, idx) {
+        const isMatched = st.matchedIds.indexOf(p.id) !== -1;
+        const isSelected = st.selectedLeft === p.id;
+        return `
+          <button type="button" class="match-card ${isMatched ? `is-matched` : ``} ${isSelected ? `is-selected` : ``}"
+            onclick="selectStage3Left('${p.id}')" ${isMatched ? `disabled` : ``}>
+            <span><strong>故事 ${idx + 1}：</strong>${p.left}</span>
+            ${isMatched ? `<i data-lucide="check-circle-2" aria-hidden="true" width="18" height="18"></i>` : ``}
+          </button>
+        `;
+      }).join(``);
+
+      const rightHtml = STAGE3_RIGHT_SHUFFLED.map(function (p) {
+        const isMatched = st.matchedIds.indexOf(p.id) !== -1;
+        return `
+          <button type="button" class="match-card ${isMatched ? `is-matched` : ``}"
+            onclick="selectStage3Right('${p.id}')" ${isMatched ? `disabled` : ``}>
+            <span>${p.right}</span>
+            ${isMatched ? `<i data-lucide="check-circle-2" aria-hidden="true" width="18" height="18"></i>` : ``}
+          </button>
+        `;
+      }).join(``);
+
+      let msgHtml = ``;
+      if (st.cleared) {
+        msgHtml = `
+          <div class="feedback-banner feedback-banner--ok">
+            <i data-lucide="check-circle-2" aria-hidden="true" width="20" height="20"></i>
+            <span>全部 4 組論證配對完成！你已經掌握「舉完例子要說明道理」的骨幹技巧了！</span>
+          </div>
+        `;
+      } else if (st.wrongFlash) {
+        msgHtml = `
+          <div class="feedback-banner feedback-banner--warn">
+            <i data-lucide="alert-triangle" aria-hidden="true" width="20" height="20"></i>
+            <span>這兩張還不太搭喔！再想一想這個故事到底證明了什麼道理？</span>
+          </div>
+        `;
+      } else if (st.selectedLeft) {
+        msgHtml = `
+          <div class="feedback-banner feedback-banner--info">
+            <i data-lucide="lightbulb" aria-hidden="true" width="20" height="20"></i>
+            <span>已選取左邊的故事卡片！請點選右邊對應的「論證道理」。</span>
+          </div>
+        `;
+      }
+
+      ws.innerHTML = `
+        <div>
+          <span class="badge-pill badge-grape">第三關：論證邏輯連線</span>
+          <h3 class="subhead" style="margin-top: var(--space-xs);">把左邊的「故事（論據）」連到右邊正確的「道理（論證）」</h3>
+          <p class="muted-text" style="margin: 0;">先點一張左邊的故事卡片，再點右邊能說明這個故事意義的道理卡片（已完成 ${st.matchedIds.length} / 4 組）。</p>
+        </div>
+        <div class="match-columns">
+          <div class="match-col">
+            <span class="badge-pill badge-pink">左欄：論據（故事例子）</span>
+            ${leftHtml}
+          </div>
+          <div class="match-col">
+            <span class="badge-pill badge-sky">右欄：論證（連結的道理）</span>
+            ${rightHtml}
+          </div>
+        </div>
+        ${msgHtml}
+        <div class="action-row" style="justify-content: space-between;">
+          <button type="button" class="btn btn-soft btn-small" onclick="resetStage3()">
+            <i data-lucide="refresh-cw" aria-hidden="true" width="16" height="16"></i>
+            <span>重新配對</span>
+          </button>
+          ${st.cleared ? `<button type="button" class="btn btn-primary btn-small" onclick="switchStage(4)">過關！前往第 4 關 →</button>` : ``}
+        </div>
+      `;
+    }
+
+    function selectStage3Left(id) {
+      if (appState.stage3.matchedIds.indexOf(id) !== -1) return;
+      appState.stage3.selectedLeft = id;
+      appState.stage3.wrongFlash = null;
+      renderArena();
+    }
+
+    function selectStage3Right(rightId) {
+      const st = appState.stage3;
+      if (!st.selectedLeft) {
+        st.wrongFlash = null;
+        return;
+      }
+      if (st.selectedLeft === rightId) {
+        if (st.matchedIds.indexOf(rightId) === -1) {
+          st.matchedIds.push(rightId);
+        }
+        st.selectedLeft = null;
+        st.wrongFlash = null;
+        if (st.matchedIds.length === STAGE3_PAIRS.length) {
+          st.cleared = true;
+        }
+      } else {
+        st.wrongFlash = rightId;
+      }
+      renderArena();
+      saveState();
+    }
+
+    function resetStage3() {
+      appState.stage3 = { selectedLeft: null, matchedIds: [], wrongFlash: null, cleared: false };
+      renderArena();
+      saveState();
+    }
+
+    // --- Stage 4 ---
+    function renderStage4(ws) {
+      const st = appState.stage4;
+      const q = STAGE4_QUESTIONS[st.qIndex];
+      const chosenIdx = st.answers[st.qIndex];
+      const allCorrect = STAGE4_QUESTIONS.every(function (item, idx) {
+        const ans = st.answers[idx];
+        return ans !== null && item.options[ans] && item.options[ans].correct;
+      });
+
+      let feedbackHtml = ``;
+      if (chosenIdx !== null && q.options[chosenIdx]) {
+        const opt = q.options[chosenIdx];
+        feedbackHtml = `
+          <div class="feedback-banner ${opt.correct ? `feedback-banner--ok` : `feedback-banner--warn`}">
+            <i data-lucide="${opt.correct ? `check-circle-2` : `alert-triangle`}" aria-hidden="true" width="20" height="20"></i>
+            <span>${opt.reason}</span>
+          </div>
+        `;
+      }
+
+      const optionsHtml = q.options.map(function (opt, idx) {
+        let extra = ``;
+        if (chosenIdx === idx) extra = opt.correct ? `is-correct` : `is-wrong`;
+        return `
+          <button type="button" class="choice-card ${extra}" onclick="answerStage4(${idx})">
+            <span class="badge-pill badge-sky">法寶選項 ${idx + 1}</span>
+            <strong>${opt.text}</strong>
+          </button>
+        `;
+      }).join(``);
+
+      ws.innerHTML = `
+        <div>
+          <span class="badge-pill badge-pink">第四關：諺語與並列句型修辭</span>
+          <h3 class="subhead" style="margin-top: var(--space-xs);">${q.prompt}</h3>
+          <p class="muted-text" style="margin: 0;">選出最適合的諺語、歇後語或「不僅……更能……」並列句型！</p>
+        </div>
+        <div class="choice-grid">${optionsHtml}</div>
+        ${feedbackHtml}
+        <div class="action-row" style="justify-content: space-between;">
+          <div class="action-row">
+            <button type="button" class="btn btn-soft btn-small" onclick="moveStage4(-1)" ${st.qIndex === 0 ? `disabled` : ``}>上一題</button>
+            <button type="button" class="btn btn-soft btn-small" onclick="moveStage4(1)" ${st.qIndex === STAGE4_QUESTIONS.length - 1 ? `disabled` : ``}>下一題</button>
+          </div>
+          ${allCorrect ? `<button type="button" class="btn btn-primary btn-small" onclick="switchStage(5)">過關！前往最終第 5 關 →</button>` : ``}
+        </div>
+      `;
+    }
+
+    function answerStage4(optIdx) {
+      const st = appState.stage4;
+      st.answers[st.qIndex] = optIdx;
+      const allCorrect = STAGE4_QUESTIONS.every(function (item, idx) {
+        const ans = st.answers[idx];
+        return ans !== null && item.options[ans] && item.options[ans].correct;
+      });
+      if (allCorrect) st.cleared = true;
+      renderArena();
+      saveState();
+    }
+
+    function moveStage4(delta) {
+      const next = appState.stage4.qIndex + delta;
+      if (next >= 0 && next < STAGE4_QUESTIONS.length) {
+        appState.stage4.qIndex = next;
+        renderArena();
+        saveState();
+      }
+    }
+
+    // --- Stage 5 ---
+    function renderStage5(ws) {
+      const st = appState.stage5;
+      const slotsHtml = st.orderIds.map(function (id, idx) {
+        const item = STAGE5_CORRECT_ORDER.find(function (x) { return x.id === id; });
+        const expected = STAGE5_CORRECT_ORDER[idx];
+        let slotClass = ``;
+        if (st.checked) {
+          slotClass = (item && expected && item.id === expected.id) ? `is-correct-slot` : `is-wrong-slot`;
+        }
+        return `
+          <div class="puzzle-slot ${slotClass}">
+            <div style="display: flex; align-items: center; gap: var(--space-md); flex: 1 1 280px;">
+              <span class="puzzle-num">${idx + 1}</span>
+              <div>
+                <strong>第 ${idx + 1} 段位置</strong>
+                <div style="margin-top: var(--space-xs);">${item ? item.text : ``}</div>
+              </div>
+            </div>
+            <div class="puzzle-controls">
+              <button type="button" class="icon-btn" aria-label="向上移動第 ${idx + 1} 張卡片" onclick="movePuzzle(${idx}, -1)" ${idx === 0 ? `disabled` : ``}>
+                <i data-lucide="arrow-up" aria-hidden="true" width="18" height="18"></i>
+              </button>
+              <button type="button" class="icon-btn" aria-label="向下移動第 ${idx + 1} 張卡片" onclick="movePuzzle(${idx}, 1)" ${idx === 4 ? `disabled` : ``}>
+                <i data-lucide="arrow-down" aria-hidden="true" width="18" height="18"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join(``);
+
+      let msgHtml = ``;
+      if (st.checked) {
+        if (st.cleared) {
+          msgHtml = `
+            <div class="feedback-banner feedback-banner--ok">
+              <i data-lucide="trophy" aria-hidden="true" width="20" height="20"></i>
+              <span>大成功！你排出了標準的「總—分—總」＋「兩正一反」五段式大綱！現在去第三單元動手寫作文吧！</span>
+            </div>
+          `;
+        } else {
+          msgHtml = `
+            <div class="feedback-banner feedback-banner--warn">
+              <i data-lucide="alert-triangle" aria-hidden="true" width="20" height="20"></i>
+              <span>橘色框的段落順序不太對喔！記得口訣：總起（論點）→ 正例一 → 正例二 → 反例 → 總結。</span>
+            </div>
+          `;
+        }
+      }
+
+      ws.innerHTML = `
+        <div>
+          <span class="badge-pill badge-grape">第五關：五段式「總—分—總」大綱拼圖</span>
+          <h3 class="subhead" style="margin-top: var(--space-xs);">用上下箭頭，將這五段文章排成最清晰的議論文架構</h3>
+          <p class="muted-text" style="margin: 0;">提示：先「總起」點出論點，中間「分述」兩正一反故事，最後「總結」呼應期許。</p>
+        </div>
+        <div class="puzzle-list">${slotsHtml}</div>
+        ${msgHtml}
+        <div class="action-row" style="justify-content: space-between;">
+          <button type="button" class="btn btn-primary" onclick="checkStage5()">
+            <i data-lucide="check" aria-hidden="true" width="18" height="18"></i>
+            <span>檢查大綱順序</span>
+          </button>
+          ${st.cleared ? `<a href="#unit-3" class="btn btn-positive btn-small">前往寫作實作區 →</a>` : ``}
+        </div>
+      `;
+    }
+
+    function movePuzzle(index, delta) {
+      const target = index + delta;
+      const arr = appState.stage5.orderIds;
+      if (target < 0 || target >= arr.length) return;
+      const temp = arr[index];
+      arr[index] = arr[target];
+      arr[target] = temp;
+      appState.stage5.checked = false;
+      renderArena();
+      saveState();
+    }
+
+    function checkStage5() {
+      appState.stage5.checked = true;
+      const isMatch = appState.stage5.orderIds.every(function (id, idx) {
+        return id === STAGE5_CORRECT_ORDER[idx].id;
+      });
+      if (isMatch) appState.stage5.cleared = true;
+      renderArena();
+      saveState();
+    }
+
+    // =========================================================================
+    // 5. Unit 3: Writing Studio & Live Checklist
+    // =========================================================================
+    function syncEssayInputsFromState() {
+      const e = appState.essay;
+      const proverbEl = document.getElementById(`essay-proverb`);
+      const p1El = document.getElementById(`essay-p1`);
+      const p2El = document.getElementById(`essay-p2`);
+      const p3El = document.getElementById(`essay-p3`);
+      const p4El = document.getElementById(`essay-p4`);
+      const p5El = document.getElementById(`essay-p5`);
+      if (proverbEl) proverbEl.value = e.proverb || ``;
+      if (p1El) p1El.value = e.p1 || ``;
+      if (p2El) p2El.value = e.p2 || ``;
+      if (p3El) p3El.value = e.p3 || ``;
+      if (p4El) p4El.value = e.p4 || ``;
+      if (p5El) p5El.value = e.p5 || ``;
+    }
+
+    function updateEssayField(field, value) {
+      appState.essay[field] = value;
+      renderEssayPreview();
+      saveState();
+    }
+
+    function applyStarterPreset(presetKey) {
+      const preset = ESSAY_PRESETS[presetKey];
+      if (!preset) return;
+      appState.essay = Object.assign({}, preset);
+      syncEssayInputsFromState();
+      renderEssayPreview();
+      saveState();
+      setStudioMessage(`已載入「${presetKey === `textbook` ? `課本經典` : presetKey === `praise` ? `校園讚美` : `冷靜溝通`}」引導範例！你可以直接修改內容變成自己的作文。`);
+    }
+
+    function insertPhrase(field, phrase) {
+      const cur = appState.essay[field] || ``;
+      const sep = cur.trim().length > 0 ? (cur.trim().endsWith(`。`) ? `` : ` `) : ``;
+      appState.essay[field] = cur + sep + phrase;
+      const el = document.getElementById(`essay-` + field);
+      if (el) {
+        el.value = appState.essay[field];
+        el.focus();
+      }
+      renderEssayPreview();
+      saveState();
+    }
+
+    function getComposedParagraphs() {
+      const e = appState.essay;
+      const para1 = (e.proverb ? e.proverb : ``) + (e.p1 ? e.p1.trim() : ``);
+      return [
+        para1.trim(),
+        (e.p2 || ``).trim(),
+        (e.p3 || ``).trim(),
+        (e.p4 || ``).trim(),
+        (e.p5 || ``).trim()
+      ];
+    }
+
+    function renderEssayPreview() {
+      const previewBox = document.getElementById(`essay-preview-box`);
+      const countBadge = document.getElementById(`word-count-badge`);
+      const checklistEl = document.getElementById(`essay-checklist`);
+      const paras = getComposedParagraphs();
+
+      const fullText = paras.filter(Boolean).join(`\n`);
+      const charCount = fullText.replace(/\s+/g, ``).length;
+      if (countBadge) countBadge.textContent = `目前字數：${charCount} 字`;
+
+      if (previewBox) {
+        if (charCount === 0) {
+          previewBox.innerHTML = `<p class="essay-empty" style="margin: 0;">左邊填寫完各段內容後，這裡會即時組合成一篇完整的《高明說話術》作文！也可以點擊上方「載入引導範例」先看看示範。</p>`;
+        } else {
+          const labels = [`第一段（總起）`, `第二段（正例一）`, `第三段（正例二）`, `第四段（反例）`, `第五段（總結）`];
+          const html = paras.map(function (p, i) {
+            if (!p) {
+              return `<p class="essay-empty" style="margin: 0;">（尚待填寫${labels[i]}）</p>`;
+            }
+            return `<p class="essay-para">${escapeHtml(p)}</p>`;
+          }).join(``);
+          previewBox.innerHTML = `<h4 style="text-align: center; margin: 0 0 var(--space-xs) 0;">高明說話術</h4>` + html;
+        }
+      }
+
+      // Check 3 Peer Review Criteria from Page 15 of source
+      const hasThesis = paras[0].length >= 12;
+      const hasTwoPosOneNeg = paras[1].length >= 12 && paras[2].length >= 12 && paras[3].length >= 12;
+      const rhetoricRegex = /(良言一句|病從口入|啞巴吃黃連|贈人玫瑰|忍一時|不僅|更能|也能)/;
+      const hasRhetoric = rhetoricRegex.test(fullText);
+
+      const checks = [
+        {
+          met: hasThesis,
+          title: `檢核指標 1（論點清晰）`,
+          desc: `開頭是否用清楚的句子寫出自己的核心主張？`
+        },
+        {
+          met: hasTwoPosOneNeg,
+          title: `檢核指標 2（兩正一反論證）`,
+          desc: `中間段是否包含「2 個正面例子 ＋ 1 個反面例子」？`
+        },
+        {
+          met: hasRhetoric,
+          title: `檢核指標 3（修辭與並列句型）`,
+          desc: `是否使用了諺語/歇後語或並列句型（如「不僅……更能……」）？`
+        }
+      ];
+
+      if (checklistEl) {
+        checklistEl.innerHTML = checks.map(function (c) {
+          return `
+            <div class="check-row ${c.met ? `is-met` : ``}">
+              <i data-lucide="${c.met ? `check-circle-2` : `circle`}" aria-hidden="true" width="20" height="20" style="flex-shrink: 0; margin-top: 2px;"></i>
+              <div>
+                <div>${c.title}</div>
+                <div class="muted-text" style="font-size: 0.85rem; font-weight: 400;">${c.desc}</div>
+              </div>
+            </div>
+          `;
+        }).join(``);
+        refreshIcons();
+      }
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, `&amp;`)
+        .replace(/</g, `&lt;`)
+        .replace(/>/g, `&gt;`)
+        .replace(/"/g, `&quot;`)
+        .replace(/'/g, `&#39;`);
+    }
+
+    function setStudioMessage(text) {
+      const msgEl = document.getElementById(`studio-status-msg`);
+      if (msgEl) msgEl.textContent = text;
+    }
+
+    function downloadEssay() {
+      const paras = getComposedParagraphs().filter(Boolean);
+      if (paras.length === 0) {
+        setStudioMessage(`請先填寫至少一段內容，再下載作文檔案喔！`);
+        return;
+      }
+      const content = `高明說話術\n\n` + paras.map(function (p) { return `　　` + p; }).join(`\n\n`);
+      if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === `function`) {
+        window.notebookAppApi.triggerFileDownload({
+          content: content,
+          contentType: `text/plain`,
+          encoding: `UTF-8`,
+          filename: `高明說話術_五年級議論文.txt`
+        });
+        setStudioMessage(`已開始下載《高明說話術_五年級議論文.txt》！`);
+      } else {
+        setStudioMessage(`目前環境未連接下載功能，請改用「複製全文」按鈕保存你的文章。`);
+      }
+    }
+
+    async function copyEssayText() {
+      const paras = getComposedParagraphs().filter(Boolean);
+      if (paras.length === 0) {
+        setStudioMessage(`目前文章還是空的，寫好一段後就可以複製囉！`);
+        return;
+      }
+      const content = `高明說話術\n\n` + paras.map(function (p) { return `　　` + p; }).join(`\n\n`);
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === `function`) {
+        try {
+          await navigator.clipboard.writeText(content);
+          setStudioMessage(`已把整篇《高明說話術》作文複製到剪貼簿！`);
+          return;
+        } catch (err) {
+          // Fallback notice
+        }
+      }
+      setStudioMessage(`已整理好文字，請直接選取預覽框內的文章複製。`);
+    }
+
+    function handleResetAll(btn) {
+      if (!btn) return;
+      if (btn.dataset.armed !== `true`) {
+        btn.dataset.armed = `true`;
+        const span = btn.querySelector(`span`);
+        if (span) span.textContent = `再按一次確認全部清除`;
+        setStudioMessage(`提醒：再按一次「確認全部清除」，將會清空闖關紀錄與作文內容。`);
+        return;
+      }
+      btn.dataset.armed = `false`;
+      const span = btn.querySelector(`span`);
+      if (span) span.textContent = `清除全部重練`;
+
+      appState = {
+        activeElement: `point`,
+        activeCase: `pos1`,
+        activeStage: 1,
+        stage1: { qIndex: 0, answers: [null, null, null], cleared: false },
+        stage2: { selections: {}, checked: false, cleared: false },
+        stage3: { selectedLeft: null, matchedIds: [], wrongFlash: null, cleared: false },
+        stage4: { qIndex: 0, answers: [null, null, null, null], cleared: false },
+        stage5: { orderIds: [`sec3`, `sec1`, `sec5`, `sec2`, `sec4`], checked: false, cleared: false },
+        essay: { proverb: `「良言一句三冬暖，惡語傷人六月寒。」`, p1: ``, p2: ``, p3: ``, p4: ``, p5: `` }
+      };
+      renderAll();
+      saveState();
+      setStudioMessage(`已全部清除重置，你可以重新展開新的挑戰！`);
+    }
+
+    function renderAll() {
+      renderElementExplorer();
+      renderCaseCompare();
+      renderArena();
+      syncEssayInputsFromState();
+      renderEssayPreview();
+      refreshIcons();
+    }
+
+    // =========================================================================
+    // 6. Boot & State Hydration
+    // =========================================================================
+    async function bootApp() {
+      if (window.notebookAppApi) {
+        try {
+          const saved = await window.notebookAppApi.getAppState();
+          if (saved) restoreState(saved);
+        } catch (err) {
+          // Proceed with default empty state
+        }
+      }
+      renderAll();
+      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === `function`) {
+        window.notebookAppApi.notifyAppReady();
+      }
+    }
+
+    document.addEventListener(`DOMContentLoaded`, bootApp);
+  </script>
+</body>
+</html>
